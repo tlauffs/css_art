@@ -1,5 +1,5 @@
 :root {
-/*
+  /*
   --background: #ede8b4;
   --light-brown: #a74f0b;
   --brown: #8f4308;
@@ -8,15 +8,14 @@
   --shadow: rgba(65, 64, 50, 0.2);
 */
 
---background: #e9e3a6;
---light-brown: #c9834e;
---brown: #b97540;
---dark-brown: #9b6339;
---darker-brown: #5a2e0e;
---shadow: rgba(65, 64, 50, 0.2);
-  
---shelf-depth: 3vmin;
+  --background: #e9e3a6;
+  --light-brown: #c9834e;
+  --brown: #b97540;
+  --dark-brown: #9b6339;
+  --darker-brown: #5a2e0e;
+  --shadow: rgba(65, 64, 50, 0.2);
 
+  --shelf-depth: 3vmin;
 }
 
 *,
@@ -73,13 +72,12 @@ body {
   top: calc(100% - var(--shelf-depth));
 }
 
-.books {
+.shelf-flex {
   position: absolute;
   display: flex;
-  height: 20vmin;
   width: calc(100% + 6vmin);
   left: calc(var(--shelf-depth) * -1);
-  top: calc(-20vmin + var(--shelf-depth));
+  bottom: calc((var(--shelf-depth)) * -1);
   align-items: flex-end;
 }
 
@@ -152,7 +150,7 @@ body {
   margin-bottom: 0.5vmin;
 }
 
-.book-stopper{
+.book-stopper {
   width: 4vmin;
   height: 5vmin;
   margin-bottom: 1.2vmin;
@@ -161,17 +159,97 @@ body {
   box-shadow: 0 0.5vmin rgb(117, 74, 25);
 }
 
-.plant {
+.plant-pot {
+  margin-left: 3vmin;
+  margin-bottom: 0.6vmin;
+  width: 13vmin;
+  height: 5vmin;
+  background-color: rgb(177, 48, 25);
+  box-shadow: inset 3vmin 0 rgb(165, 45, 24);
+  position: relative;
+}
+
+.plant-pot::before {
+  position: absolute;
+  z-index: 5;
+  content: "";
+  left: -2.5%;
+  top: -0.5vmin;
+  width: 105%;
+  height: 2vmin;
+  background-color: rgb(126, 36, 21);
+}
+
+.plant-pot::after {
+  content: "";
+  position: absolute;
+  top: -1.15vmin;
+  left: 0;
+  height: 2vmin;
+  width: 100%;
+  z-index: 4;
+  background-color: rgb(177, 101, 14);
+  --mask:
+    radial-gradient(0.70vmin at 50% 0.99vmin,#000 99%,#0000 101%) calc(50% - 1.02vmin) 0/2.04vmin 100%,
+    radial-gradient(0.70vmin at 50% -0.48vmin,#0000 99%,#000 101%) 50% 0.51vmin/2.04vmin 100% repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+
+}
+
+.leaf {
   width: 5vmin;
   height: 5vmin;
-  background-color: green;
+  background-color: rgb(9, 187, 9);
+  position: absolute;
+  border-radius: 0 4vmin;
+  box-shadow: inset 1vmin 1vmin rgb(2, 177, 2), inset 2vmin 2vmin rgb(3, 107, 8);
+  border-left: rgb(0, 73, 0) 0.4vmin solid;
+}
+
+.leaf:nth-child(1) {
+  left: -1vmin;
+  top: -4vmin;
+  z-index: 1;
+}
+
+.leaf:nth-child(2) {
+  left: 1vmin;
+  top: -4.5vmin;
+  z-index: 2;
+  rotate: 30deg;
+  scale: 0.9;
+}
+
+.leaf:nth-child(3) {
+  left: 3.5vmin;
+  top: -4.7vmin;
+  z-index: 1;
+  rotate: 40deg;
+  z-index: 1;
+}
+
+.leaf:nth-child(4) {
+  left: 6vmin;
+  top: -4vmin;
+  z-index: 3;
+  rotate: 55deg;
+  scale: 0.85;
+}
+
+.leaf:nth-child(5) {
+  left: 9vmin;
+  top: -4.5vmin;
+  z-index: 1;
+  rotate: 80deg;
+  z-index: 1;
 }
 
 .book-stack {
   display: flex;
   transform: rotate(-90deg);
   margin-bottom: -2vmin;
-  margin-left: 3vmin;
+  margin-left: 7.5vmin;
 }
 
 .book-stack .book:nth-child(1) {
@@ -192,7 +270,7 @@ body {
   box-shadow: inset 1.2vmin 0 #00000038, inset 0 5vmin var(--book-color),
     inset 0 5.5vmin #e6d8f0, inset 0 6vmin var(--book-color),
     inset 0 6.5vmin #e6d8f0;
-    margin-top: 2vmin;
+  margin-top: 2vmin;
 }
 
 .book-stack .book:nth-child(3) {
@@ -204,3 +282,64 @@ body {
   margin-top: 1vmin;
 }
 
+.box:nth-child(1) {
+  height: 15vmin;
+  width: 20vmin;
+  background-color: rgb(161, 110, 76);
+  margin-left: 1.5vmin;
+  margin-bottom: 0.5vmin;
+  border: rgb(53, 30, 15) 0.5vmin solid;
+  box-shadow: inset 3vmin 0 rgb(151, 104, 72);
+  position: relative;
+}
+
+.box:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  width: 4vmin;
+  height: 3vmin;
+  background-color: wheat;
+  top: 0vmin;
+  left: 6vmin;
+}
+
+.box:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  width: 4vmin;
+  height: 3vmin;
+  background-color: rgb(51, 51, 51);
+  bottom: 1vmin;
+  right: 1vmin;
+}
+
+.box:nth-child(2) {
+  --border-color: rgb(22, 12, 5);
+  --chest-color: rgb(92, 51, 12);
+  --chest-color-dark: rgb(66, 36, 8);
+  height: 14vmin;
+  width: 23vmin;
+  border-radius: 1.5vmin 1.5vmin 0 0;
+  background-color: var(--chest-color);
+  margin-left: 4.5vmin;
+  margin-bottom: 1.25vmin;
+  border: var(--border-color) 0.5vmin solid;
+  box-shadow: inset 3vmin 0 rgba(0, 0, 0, 0.151),
+    inset 0 -1.5vmin var(--chest-color), inset 0 -3vmin var(--chest-color-dark),
+    inset 0 -4.5vmin var(--chest-color), inset 0 -6vmin var(--chest-color-dark),
+    inset 0 -7.5vmin var(--chest-color), inset 0 -9vmin var(--chest-color-dark),
+    inset 0 -9.5vmin var(--border-color), inset 0 -14vmin var(--chest-color);
+  position: relative;
+}
+
+.box:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  width: 2vmin;
+  height: 2.7vmin;
+  background-color: black;
+  border: 0.9vmin rgb(218, 166, 25) solid;
+  top: 3vmin;
+  left: 10.5vmin;
+  border-radius: 0.5vmin 0.5vmin 50% 50%;
+}
