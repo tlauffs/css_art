@@ -189,12 +189,12 @@ body {
   width: 100%;
   z-index: 4;
   background-color: rgb(177, 101, 14);
-  --mask:
-    radial-gradient(0.70vmin at 50% 0.99vmin,#000 99%,#0000 101%) calc(50% - 1.02vmin) 0/2.04vmin 100%,
-    radial-gradient(0.70vmin at 50% -0.48vmin,#0000 99%,#000 101%) 50% 0.51vmin/2.04vmin 100% repeat-x;
+  --mask: radial-gradient(0.7vmin at 50% 0.99vmin, #000 99%, #0000 101%)
+      calc(50% - 1.02vmin) 0/2.04vmin 100%,
+    radial-gradient(0.7vmin at 50% -0.48vmin, #0000 99%, #000 101%) 50% 0.51vmin/2.04vmin
+      100% repeat-x;
   -webkit-mask: var(--mask);
-          mask: var(--mask);
-
+  mask: var(--mask);
 }
 
 .leaf {
@@ -342,4 +342,124 @@ body {
   top: 3vmin;
   left: 10.5vmin;
   border-radius: 0.5vmin 0.5vmin 50% 50%;
+}
+
+.potion-parent {
+  position: relative;
+  z-index: 1;
+}
+
+.potion {
+  height: 9vmin;
+  width: 2vmin;
+  background-color: rgba(182, 182, 182, 0.15);
+  border-radius: 0 0 1vmin 1vmin;
+  border: 0.4vmin rgba(182, 182, 182, 0.5) solid;
+  box-shadow: inset 0.5vmin 0 rgba(95, 95, 95, 0.356);
+  position: relative;
+}
+
+.potion::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  border-radius: 0 0 1vmin 1vmin;
+  background-color: rgb(255, 0, 0);
+  z-index: -1;
+}
+
+.potion::after {
+  content: "";
+  position: absolute;
+  top: -1vmin;
+  left: 0;
+  height: 1.75vmin;
+  width: 100%;
+  background-color: rgb(133, 68, 25);
+  box-shadow: inset 0.5vmin 0 rgb(87, 44, 16);
+  z-index: -1;
+  transform: perspective(0.1vmin) rotateX(-1deg);
+}
+
+.potion-parent:nth-child(odd) {
+  z-index: 2;
+}
+
+.potion-parent:nth-child(1) .potion {
+  margin-left: 4vmin;
+  margin-bottom: 3.5vmin;
+}
+
+.potion-parent:nth-child(1) .potion::before {
+  background-color: rgb(255, 0, 0);
+  top: 3vmin;
+  height: 5.4vmin;
+}
+
+.potion-parent:nth-child(2) .potion {
+  margin-left: -0.8vmin;
+  margin-bottom: 4vmin;
+}
+
+.potion-parent:nth-child(2) .potion::before {
+  background-color: rgba(59, 206, 243, 0.842);
+  top: 0.5vmin;
+  height: 8vmin;
+}
+
+.potion-parent:nth-child(3) .potion {
+  margin-left: 2vmin;
+  margin-bottom: 3.5vmin;
+}
+
+.potion-parent:nth-child(3) .potion::before {
+  background-color: rgba(40, 255, 57, 0.842);
+  top: 2vmin;
+  height: 6.5vmin;
+}
+
+.potion-parent:nth-child(4) .potion {
+  margin-left: -0.8vmin;
+  margin-bottom: 4vmin;
+}
+
+.potion-parent:nth-child(4) .potion::before {
+  background-color: rgba(202, 0, 0, 0.842);
+  top: 1.5vmin;
+  height: 7vmin;
+}
+
+.potion-stand {
+  background-color: rgb(104, 51, 1);
+  height: 1.5vmin;
+  width: 6vmin;
+  margin-bottom: 1vmin;
+  margin-left: -7vmin;
+  border-bottom: 0.5vmin rgb(32, 15, 1) solid;
+  position: relative;
+  z-index: 1;
+}
+
+.potion-stand::before {
+  content: '';
+  position: absolute;
+  top: -8vmin;
+  left: 2.5vmin;
+  height: 8vmin;
+  width: 1vmin;
+  background-color: rgb(104, 51, 1);
+  box-shadow: inset 0.4vmin 0 rgb(32, 15, 1);
+}
+
+
+.potion-stand::after {
+  content: '';
+  position: absolute;
+  top: -8.8vmin;
+  left: -2vmin;
+  height: 0.8vmin;
+  width: 10vmin;
+  background-color: rgb(104, 51, 1);
+  border-bottom: 0.5vmin rgb(49, 24, 4) solid;
 }
