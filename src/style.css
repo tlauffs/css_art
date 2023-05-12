@@ -37,7 +37,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  padding: 10vmin 0;
+  padding: 0vmin 0;
 }
 
 .flex {
@@ -55,6 +55,12 @@ body {
     inset var(--shelf-depth) 0vmin var(--light-brown),
     inset calc(var(--shelf-depth) * -1) 0vmin var(--light-brown);
   position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .bookshelf {
+    scale: 130%;
+  }
 }
 
 .shelf {
@@ -88,6 +94,7 @@ body {
   width: calc(100% + 6vmin);
   left: calc(var(--shelf-depth) * -1);
   bottom: calc((var(--shelf-depth)) * -1);
+  height: 18vmin;
   align-items: flex-end;
 }
 
@@ -160,13 +167,77 @@ body {
   margin-bottom: 0.5vmin;
 }
 
+.book:nth-child(7) {
+  --book-color: #dbeeee;
+  width: 4vmin;
+  height: 10vmin;
+  background-color: var(--book-color);
+  box-shadow: inset 1.5vmin 0 #00000033, inset 0 2vmin var(--book-color),
+    inset 0 2.5vmin #4f35aa, inset 0 3vmin var(--book-color),
+    inset 0 3.5vmin #4f35aa, inset 0 4vmin var(--book-color),
+    inset 0 4.5vmin #4f35aa, inset 0 10vmin var(--book-color);
+  margin-bottom: 0.8vmin;
+}
+
+.book:nth-child(8) {
+  --book-color: #daa6a6;
+  width: 3vmin;
+  height: 11vmin;
+  background-color: var(--book-color);
+  box-shadow: inset 1.2vmin 0 #00000038, inset 0 2vmin var(--book-color),
+    inset 0 3vmin #ebe7ee, inset 0 3.5vmin var(--book-color),
+    inset 0 4.5vmin #ebe7ee;
+  margin-bottom: 0.4vmin;
+}
+
+.book:nth-child(9) {
+  --book-color: #6b48ac;
+  width: 4vmin;
+  height: 11vmin;
+  background-color: var(--book-color);
+  box-shadow: inset 1.5vmin 0 #00000038, inset 0 2.3vmin var(--book-color),
+    inset 0 3vmin #cce0df, inset 0 8.3vmin var(--book-color),
+    inset 0 9vmin #cce0df;
+  margin-bottom: 1vmin;
+}
+
 .book-stopper {
   width: 4vmin;
   height: 5vmin;
   margin-bottom: 1.2vmin;
-  border-bottom: 1vmin rgb(216, 130, 32) solid;
-  border-left: 1vmin rgb(212, 123, 22) solid;
+  border-bottom: 1vmin rgb(238, 182, 118) solid;
+  border-left: 1vmin rgb(238, 182, 118) solid;
   box-shadow: 0 0.5vmin rgb(117, 74, 25);
+}
+
+.book-2:nth-child(1) {
+  --book-color: #5d27a3;
+  width: 2vmin;
+  height: 8vmin;
+  background-color: var(--book-color);
+  box-shadow: inset 1.2vmin 0 #00000038, inset 0 5vmin var(--book-color),
+    inset 0 5.5vmin #e6d8f0, inset 0 6vmin var(--book-color),
+    inset 0 6.5vmin #e6d8f0;
+  margin-bottom: 0.9vmin;
+  margin-left: 2vmin;
+}
+
+.book-2:nth-child(2) {
+  --book-color: #883376;
+  width: 2vmin;
+  height: 8vmin;
+  background-color: var(--book-color);
+  box-shadow: inset 1.2vmin 0 #00000038;
+  margin-bottom: 1.2vmin;
+}
+
+.book-2:nth-child(3) {
+  --book-color: #e6eaf1;
+  width: 2.5vmin;
+  height: 9vmin;
+  background-color: var(--book-color);
+  margin-bottom: 1vmin;
+  box-shadow: inset 1.2vmin 0 #00000038, inset 0 -3vmin #5c53ad;
 }
 
 .plant-pot {
@@ -259,7 +330,7 @@ body {
   display: flex;
   transform: rotate(-90deg);
   margin-bottom: -2vmin;
-  margin-left: 7.5vmin;
+  margin-left: 3.4vmin;
 }
 
 .book-stack .book:nth-child(1) {
@@ -366,7 +437,7 @@ body {
   border-radius: 0 0 1vmin 1vmin;
   border: 0.4vmin rgba(182, 182, 182, 0.5) solid;
   box-shadow: inset 0.5vmin 0 rgba(95, 95, 95, 0.356);
-  position: relative;
+  position: absolute;
 }
 
 .potion::before {
@@ -397,8 +468,9 @@ body {
 }
 
 .potion-parent:nth-child(1) .potion {
-  margin-left: 4vmin;
-  margin-bottom: 3.5vmin;
+  position: absolute;
+  top: -10vmin;
+  left: 2vmin;
 }
 
 .potion-parent:nth-child(1) .potion::before {
@@ -408,8 +480,9 @@ body {
 }
 
 .potion-parent:nth-child(2) .potion {
-  margin-left: -0.8vmin;
-  margin-bottom: 4vmin;
+  position: absolute;
+  top: -10.5vmin;
+  left: 3vmin;
 }
 
 .potion-parent:nth-child(2) .potion::before {
@@ -419,8 +492,9 @@ body {
 }
 
 .potion-parent:nth-child(3) .potion {
-  margin-left: 2vmin;
-  margin-bottom: 3.5vmin;
+  position: absolute;
+  top: -10vmin;
+  left: 7vmin;
 }
 
 .potion-parent:nth-child(3) .potion::before {
@@ -430,8 +504,9 @@ body {
 }
 
 .potion-parent:nth-child(4) .potion {
-  margin-left: -0.8vmin;
-  margin-bottom: 4vmin;
+  position: absolute;
+  top: -10.5vmin;
+  left: 8vmin;
 }
 
 .potion-parent:nth-child(4) .potion::before {
@@ -440,12 +515,16 @@ body {
   height: 7vmin;
 }
 
+.potions {
+  margin-left: 2vmin;
+}
+
 .potion-stand {
   background-color: rgb(104, 51, 1);
   height: 1.5vmin;
   width: 6vmin;
   margin-bottom: 1vmin;
-  margin-left: -7vmin;
+  margin-left: 3vmin;
   border-bottom: 0.5vmin rgb(49, 24, 4) solid;
   position: relative;
   z-index: 1;
@@ -532,7 +611,7 @@ body {
   margin-left: 3vmin;
 }
 
-.potion-large-second::before {
+.potion-large-2::before {
   background: rgb(25, 125, 192);
   box-shadow: inset 0 0.5vmin #c8cbd6;
   top: 1.52vmin;
@@ -540,9 +619,9 @@ body {
   top: 1vmin;
 }
 
-.potion-parent:nth-child(6) .potion-large {
+.potion-large-1 {
   margin-bottom: 0.6vmin;
-  margin-left: 3vmin;
+  margin-left: 5vmin;
 }
 
 .bubble-2:nth-child(1) {
@@ -559,9 +638,29 @@ body {
   margin-left: 2.2vmin;
 }
 
-.potion-parent:nth-child(7) .potion-large {
+.potion-large-2 {
   margin-bottom: 1.5vmin;
   margin-left: 1vmin;
+}
+
+.potion-large-3 {
+  margin-bottom: 1.3vmin;
+  margin-left: 1.5vmin;
+  width: 4.5vmin;
+  height: 5vmin;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.potion-large-3::before {
+  content: "";
+  box-shadow: none;
+  width: 100%;
+  height: 0.5vmin;
+  background: rgb(107, 236, 75);
+  top: 3.9vmin;
 }
 
 .plant-pot-2 {
@@ -594,22 +693,13 @@ body {
   left: 1.7vmin;
   border-radius: 50%;
 }
-/*
-.spike {
-  height: 0.3vmin;
-  width: 0.3vmin;
-  background-color: white;
-  margin-top: 1vmin;
-  margin-left: 1vmin;
-  border-radius: 50%;
-}
-*/
+
 .spike {
   width: 0;
   height: 0;
-  border-top:  0.25vmin solid transparent;
-  border-left:  0.8vmin solid rgb(1, 34, 0);
-  border-bottom:  0.25vmin solid transparent;
+  border-top: 0.25vmin solid transparent;
+  border-left: 0.8vmin solid rgb(1, 34, 0);
+  border-bottom: 0.25vmin solid transparent;
   position: absolute;
 }
 
@@ -629,7 +719,7 @@ body {
   top: 0.5vmin;
   left: 2.5vmin;
   transform: rotate(-35deg);
-  border-left:  0.6vmin solid rgb(1, 34, 0);
+  border-left: 0.6vmin solid rgb(1, 34, 0);
 }
 
 .spike:nth-child(4) {
@@ -642,19 +732,19 @@ body {
   top: 2vmin;
   left: 1vmin;
   transform: rotate(205deg);
-  border-left:  0.6vmin solid rgb(1, 34, 0);
+  border-left: 0.6vmin solid rgb(1, 34, 0);
 }
 
 .spike:nth-child(6) {
   top: 3vmin;
   left: 1.75vmin;
   transform: rotate(205deg);
-  border-left:  0.6vmin solid rgb(1, 34, 0);
+  border-left: 0.6vmin solid rgb(1, 34, 0);
 }
 
 .spike:nth-child(7) {
   top: 2.75vmin;
   left: 3.5vmin;
   transform: rotate(-20deg);
-  border-left:  0.6vmin solid rgb(1, 34, 0);
+  border-left: 0.6vmin solid rgb(1, 34, 0);
 }

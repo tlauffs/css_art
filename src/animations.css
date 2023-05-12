@@ -2,9 +2,14 @@
   animation: book-row-animation 2.3s cubic-bezier(0.28, 0.84, 0.42, 1);
 }
 
+.book-row:hover .book-2 {
+  animation: book-row-animation 2.3s cubic-bezier(0.28, 0.84, 0.42, 1);
+}
+
+
 .book-row:hover .book-stopper {
   animation: book-row-stopper-animation 1s cubic-bezier(0.28, 0.84, 0.42, 1);
-  animation-delay: 0.6s;
+  animation-delay: 0.9s;
 }
 
 @keyframes book-row-animation {
@@ -49,6 +54,18 @@
 
 .book-row .book:nth-child(6) {
   animation-delay: 0.5s;
+}
+
+.book-row .book:nth-child(7) {
+  animation-delay: 0.6s;
+}
+
+.book-row .book:nth-child(8) {
+  animation-delay: 0.7s;
+}
+
+.book-row .book:nth-child(9) {
+  animation-delay: 0.8s;
 }
 
 @keyframes book-row-stopper-animation {
