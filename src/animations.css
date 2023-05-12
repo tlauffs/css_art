@@ -4,7 +4,7 @@
 
 .book-row:hover .book-stopper {
   animation: book-row-stopper-animation 1s cubic-bezier(0.28, 0.84, 0.42, 1);
-    animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 
 @keyframes book-row-animation {
@@ -62,7 +62,7 @@
     rotate: 0deg;
   }
   50% {
-    transform: translate(0.2vmin, 0vmin) scale(0.95,1.05);
+    transform: translate(0.2vmin, 0vmin) scale(0.95, 1.05);
   }
   70% {
     rotate: 00deg;
