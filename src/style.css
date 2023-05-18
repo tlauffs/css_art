@@ -497,6 +497,7 @@ a:hover {
   border: 0.4vmin rgba(182, 182, 182, 0.5) solid;
   box-shadow: inset 0.5vmin 0 rgba(95, 95, 95, 0.356);
   position: absolute;
+  overflow: hidden;
 }
 
 .potion::before {
@@ -509,17 +510,34 @@ a:hover {
   z-index: -1;
 }
 
-.potion::after {
-  content: "";
+.potion-cap {
   position: absolute;
-  top: -1vmin;
-  left: 0;
   height: 1.75vmin;
-  width: 100%;
+  width: 1.5vmin;
   background-color: rgb(133, 68, 25);
   box-shadow: inset 0.5vmin 0 rgb(87, 44, 16);
   z-index: -1;
   transform: perspective(0.1vmin) rotateX(-1deg);
+}
+
+.potion-parent:nth-child(1) .potion-cap{
+  top: -10.7vmin;
+  left: 2.25vmin;
+}
+
+.potion-parent:nth-child(2) .potion-cap{
+  top: -11.25vmin;
+  left: 3.3vmin;
+}
+
+.potion-parent:nth-child(3) .potion-cap{
+  top: -10.7vmin;
+  left: 7.25vmin;
+}
+
+.potion-parent:nth-child(4) .potion-cap{
+  top: -11.25vmin;
+  left: 8.3vmin;
 }
 
 .potion-parent:nth-child(odd) {
@@ -546,8 +564,8 @@ a:hover {
 
 .potion-parent:nth-child(2) .potion::before {
   background-color: rgba(59, 206, 243, 0.842);
-  top: 0.5vmin;
-  height: 8vmin;
+  top: 0.7vmin;
+  height: 7.7vmin;
 }
 
 .potion-parent:nth-child(3) .potion {

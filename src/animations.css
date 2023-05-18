@@ -78,25 +78,25 @@
 
 @keyframes book-row-stopper-animation {
   0% {
-    transform: translate(0,0);
+    transform: translate(0, 0);
   }
   50% {
     transform: translate(0.2vmin, 0vmin) scale(0.95, 1.05);
   }
   100% {
-    transform: translate(0,0);
+    transform: translate(0, 0);
   }
 }
 
 @keyframes book-row-stopper-2-animation {
   0% {
-    transform: translate(0,0);
+    transform: translate(0, 0);
   }
   50% {
     transform: translate(-0.2vmin, 0vmin) scale(0.95, 1.05);
   }
   100% {
-    transform: translate(0,0);
+    transform: translate(0, 0);
   }
 }
 
@@ -168,7 +168,7 @@
   transition: all ease 300ms;
 }
 
-.camera:hover::after{
+.camera:hover::after {
   transform: rotate(80deg);
 }
 
@@ -197,4 +197,217 @@
 
 .plant-pot:hover .cactus {
   scale: 1.1;
+}
+
+.plant-pot:hover .berry:nth-child(6) {
+  animation: berry-animation 2s cubic-bezier(0.42, -0.01, 0.77, 0.22);
+}
+
+.plant-pot:hover .berry:nth-child(2) {
+  animation: berry-animation 2s cubic-bezier(0.42, -0.01, 0.77, 0.22) 250ms;
+}
+
+.plant-pot:hover .berry:nth-child(3) {
+  animation: berry-animation 2s cubic-bezier(0.42, -0.01, 0.77, 0.22) 400ms;
+}
+
+.plant-pot:hover .berry:nth-child(1) {
+  animation: berry-animation 2s cubic-bezier(0.42, -0.01, 0.77, 0.22) 600ms;
+}
+
+.plant-pot:hover .berry:nth-child(4) {
+  animation: berry-animation 2s cubic-bezier(0.42, -0.01, 0.77, 0.22) 700ms;
+}
+
+.plant-pot:hover .berry:nth-child(5) {
+  animation: berry-animation 2s cubic-bezier(0.42, -0.01, 0.77, 0.22) 800ms;
+}
+
+@keyframes berry-animation {
+  0% {
+    translate: 0 0vmin;
+    scale: 1;
+  }
+  20% {
+    scale: 1;
+  }
+  30% {
+    translate: 0 7.5vmin;
+    rotate: 200deg;
+    scale: 0;
+  }
+  31% {
+    translate: 0 0vmin;
+    scale: 0;
+  }
+  100% {
+    translate: 0 0vmin;
+    scale: 1;
+  }
+}
+
+.potion::before {
+  transition: all ease 400ms;
+}
+
+.potion:hover::before {
+  transform: translateY(100%);
+}
+
+.book-stack .book {
+  transition: all ease 200ms;
+}
+
+.book-stack:hover .book:nth-child(2) {
+  transform: translateY(-1.2vmin);
+}
+
+.book-stack:hover .book:nth-child(3) {
+  transform: translateY(0.5vmin);
+}
+
+.leaf {
+  transition: all ease 250ms;
+}
+
+.plant-pot:hover .leaf {
+  scale: 0.9;
+}
+
+.plant-pot:hover .leaf:nth-child(2) {
+  scale: 1;
+}
+
+.plant-pot:hover .leaf:nth-child(4) {
+  scale: 0.95;
+}
+
+.potion-large::after {
+  transition: all ease 250ms;
+}
+
+.potion-large-1:hover::after {
+  animation: lid-animation 1500ms ease;
+}
+
+.potion-large-2:hover::after {
+  animation: lid-animation 1500ms ease;
+}
+
+.potion-large-3:hover::after {
+  transform: translateY(-1vmin);
+  rotate: -10deg;
+}
+
+
+@keyframes lid-animation {
+  0% {
+    rotate: 0deg;
+    transform: translateY(0);
+  }
+  25% {
+    rotate: -10deg;
+    transform: translateY(-1vmin);
+  }
+  75% {
+    rotate: -10deg;
+    transform: translateY(-1vmin);
+  }
+  100% {
+    rotate: 0deg;
+    transform: translateY(0);
+  }
+}
+
+.potion-large:hover .bubble:nth-child(1) {
+  animation: bubble-animation 1300ms ease 100ms;
+}
+
+.potion-large:hover .bubble:nth-child(2) {
+  animation: bubble-animation-2 1300ms ease 200ms;
+}
+
+.potion-large:hover .bubble:nth-child(3) {
+  animation: bubble-animation 1900ms ease 300ms;
+}
+
+@keyframes bubble-animation {
+  0% {
+    filter: blur(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(-0.5vmin) translateY(-0.33vmin);
+  }
+  40% {
+    transform: translateX(0.2vmin) translateY(-0.66vmin);
+  }
+  60% {
+    transform: translateY(-1vmin) translateX(0);
+    opacity: 0.2;
+    filter: blur(0.3vmin);
+    scale: 1;
+  }
+  61% {
+    scale: 0;
+    transform: translateX(0vmin) translateY(0);
+  }
+  100% {
+    scale: 1;
+    transform: translateX(0vmin) translateY(0);
+  }
+}
+
+@keyframes bubble-animation-2 {
+  0% {
+    filter: blur(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(-0.2vmin) translateY(-0.33vmin);
+  }
+  40% {
+    transform: translateX(0vmin) translateY(-0.66vmin);
+  }
+  60% {
+    transform: translateY(-1vmin);
+    opacity: 0.2;
+    filter: blur(0.3vmin);
+    scale: 1;
+  }
+  61% {
+    scale: 0;
+    transform: translateX(0vmin) translateY(0);
+  }
+  100% {
+    scale: 1;
+    transform: translateX(0vmin) translateY(0);
+  }
+}
+
+@keyframes bubble-animation-3 {
+  0% {
+    filter: blur(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(0.3vmin) translateY(-0.66vmin);
+  }
+  40% {
+    transform: translateX(-0.1vmin) translateY(-1.33vmin);
+  }
+  60% {
+    transform: translateY(-2vmin);
+    opacity: 0.2;
+    filter: blur(0.3vmin);
+    scale: 1;
+  }
+  61% {
+    scale: 0;
+    transform: translateX(0vmin) translateY(0);
+  }
+  100% {
+    scale: 1;
+    transform: translateX(0vmin) translateY(0);
+  }
 }
