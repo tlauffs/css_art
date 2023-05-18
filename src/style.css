@@ -50,12 +50,12 @@ h1 {
 }
 
 a {
-  color: #a14091;
+  color: #540977;
   transition: all ease 200ms;
 }
 
 a:hover {
-  color: #55104b;
+  color: #9a59b8;
 }
 
 .flex {
@@ -68,7 +68,7 @@ a:hover {
   width: max(200%, 100rem);
   height: 100%;
   bottom: -65%;
-  background-color: #6b6386;
+  background-color: #6f6786;
   border-radius: 50%;
 }
 
