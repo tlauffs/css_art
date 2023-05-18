@@ -88,3 +88,41 @@
     rotate: 0deg;
   }
 }
+
+.left:hover {
+  transform: translateX(80%);
+}
+
+.right:hover {
+  transform: translateX(-80%);
+}
+
+.right:hover .box {
+  transform: translateX(-10vmin);
+  background-color: red;
+}
+
+.plant-1:hover .leaf{
+  animation: plant-animation-grow 3s cubic-bezier(0.28, 0.84, 0.42, 1);
+}
+
+@keyframes plant-animation-grow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2) translate(-0.5vmin, -0.5vmin); 
+    filter: blur(0);
+    opacity: 1;
+  }
+  70% {
+    filter: blur(5vmin);
+    transform: scale(3);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(1vmin);
+    transform: scale(10);
+    opacity: 0;
+  }
+}
