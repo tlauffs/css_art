@@ -108,21 +108,21 @@
 
 @keyframes plant-animation-grow {
   0% {
-    transform: scale(1);
+    transform: scale(1) translateZ(-1px);
   }
   50% {
-    transform: scale(1.2) translate(-0.5vmin, -0.5vmin); 
+    transform: scale(1.2) translate(-0.5vmin, -0.5vmin) translateZ(-1px); 
     filter: blur(0);
     opacity: 1;
   }
   70% {
     filter: blur(5vmin);
-    transform: scale(3);
+    transform: scale(3) translateZ(-1px);
     opacity: 0;
   }
   100% {
     filter: blur(1vmin);
-    transform: scale(10);
+    transform: scale(10) translateZ(-1px);
     opacity: 0;
   }
 }

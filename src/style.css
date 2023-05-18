@@ -1,14 +1,17 @@
 :root {
   /*
-  --background: #ede8b4;
+
+  --background: #051725;
   --light-brown: #a74f0b;
   --brown: #8f4308;
   --dark-brown: #572804;
   --darker-brown: #301603;
   --shadow: rgba(65, 64, 50, 0.2);
+
+--background: #e9e3a6;
 */
 
-  --background: #e9e3a6;
+  --background: #c2b5ec;
   --light-brown: #c9834e;
   --brown: #b97540;
   --dark-brown: #9b6339;
@@ -40,6 +43,10 @@ body {
   padding: 0vmin 0;
 }
 
+h1 {
+  line-height: 100%;
+}
+
 .flex {
   display: flex;
   align-items: flex-end;
@@ -58,9 +65,21 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .bookshelf {
+  .bookshelf-wrapper {
     scale: 130%;
   }
+}
+
+.bookshelf-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 0 5vmin;
+}
+
+.bookshelf-top > * {
+  margin-bottom: 0 !important;
 }
 
 .shelf {
@@ -113,13 +132,13 @@ body {
 }
 
 .book:nth-child(2) {
-  --book-color: #99b141;
+  --book-color: #34a777;
   width: 4vmin;
   height: 11vmin;
   background-color: var(--book-color);
-  box-shadow: inset 1.5vmin 0 #00000038, inset 0 2.3vmin var(--book-color),
-    inset 0 3vmin #647918, inset 0 8.3vmin var(--book-color),
-    inset 0 9vmin #647918;
+  box-shadow: inset 1.5vmin 0 #00000038, inset 0 2.4vmin var(--book-color),
+    inset 0 3vmin #d6dbc3, inset 0 8.4vmin var(--book-color),
+    inset 0 9vmin #d6dbc3;
   margin-bottom: 1vmin;
 }
 
@@ -128,9 +147,9 @@ body {
   width: 3vmin;
   height: 11vmin;
   background-color: var(--book-color);
-  box-shadow: inset 1.2vmin 0 #00000038, inset 0 2vmin var(--book-color),
-    inset 0 3vmin #9fceca, inset 0 3.5vmin var(--book-color),
-    inset 0 4.5vmin #9fceca;
+  box-shadow: inset 1.2vmin 0 #00000038, inset 0 2.4vmin var(--book-color),
+    inset 0 3vmin #d5e4e2, inset 0 3.4vmin var(--book-color),
+    inset 0 4vmin #d5e4e2;
   margin-bottom: 0.9vmin;
 }
 
@@ -139,7 +158,7 @@ body {
   width: 2vmin;
   height: 8vmin;
   background-color: var(--book-color);
-  box-shadow: inset 1.2vmin 0 #00000038, inset 0 5vmin var(--book-color),
+  box-shadow: inset 1vmin 0 #00000038, inset 0 5vmin var(--book-color),
     inset 0 5.5vmin #e6d8f0, inset 0 6vmin var(--book-color),
     inset 0 6.5vmin #e6d8f0;
   margin-bottom: 0.9vmin;
@@ -150,7 +169,7 @@ body {
   width: 2vmin;
   height: 8vmin;
   background-color: var(--book-color);
-  box-shadow: inset 1.2vmin 0 #00000038;
+  box-shadow: inset 1vmin 0 #00000038;
   margin-bottom: 1.2vmin;
 }
 
@@ -180,13 +199,13 @@ body {
 }
 
 .book:nth-child(8) {
-  --book-color: #daa6a6;
+  --book-color: #ac76a4;
   width: 3vmin;
   height: 11vmin;
   background-color: var(--book-color);
-  box-shadow: inset 1.2vmin 0 #00000038, inset 0 2vmin var(--book-color),
+  box-shadow: inset 1.2vmin 0 #00000038, inset 0 2.5vmin var(--book-color),
     inset 0 3vmin #ebe7ee, inset 0 3.5vmin var(--book-color),
-    inset 0 4.5vmin #ebe7ee;
+    inset 0 4vmin #ebe7ee, inset 0 -1vmin #ebe7ee;
   margin-bottom: 0.4vmin;
 }
 
@@ -195,8 +214,8 @@ body {
   width: 4vmin;
   height: 11vmin;
   background-color: var(--book-color);
-  box-shadow: inset 1.5vmin 0 #00000038, inset 0 2.3vmin var(--book-color),
-    inset 0 3vmin #cce0df, inset 0 8.3vmin var(--book-color),
+  box-shadow: inset 1.5vmin 0 #00000038, inset 0 2.4vmin var(--book-color),
+    inset 0 3vmin #cce0df, inset 0 8.4vmin var(--book-color),
     inset 0 9vmin #cce0df;
   margin-bottom: 1vmin;
 }
@@ -215,7 +234,7 @@ body {
   width: 2vmin;
   height: 8vmin;
   background-color: var(--book-color);
-  box-shadow: inset 1.2vmin 0 #00000038, inset 0 5vmin var(--book-color),
+  box-shadow: inset 1vmin 0 #00000038, inset 0 5vmin var(--book-color),
     inset 0 5.5vmin #e6d8f0, inset 0 6vmin var(--book-color),
     inset 0 6.5vmin #e6d8f0;
   margin-bottom: 0.9vmin;
@@ -227,7 +246,7 @@ body {
   width: 2vmin;
   height: 8vmin;
   background-color: var(--book-color);
-  box-shadow: inset 1.2vmin 0 #00000038;
+  box-shadow: inset 1vmin 0 #00000038;
   margin-bottom: 1.2vmin;
 }
 
@@ -237,7 +256,8 @@ body {
   height: 9vmin;
   background-color: var(--book-color);
   margin-bottom: 1vmin;
-  box-shadow: inset 1.2vmin 0 #00000038, inset 0 -3vmin #5c53ad;
+  box-shadow: inset 1vmin 0 #00000038, inset 0 -0.5vmin #5c53ad,
+    inset 0 0.5vmin #5c53ad;
 }
 
 .plant-pot {
@@ -246,19 +266,22 @@ body {
   width: 13vmin;
   height: 5vmin;
   background-color: rgb(177, 48, 25);
-  box-shadow: inset 3vmin 0 rgb(165, 45, 24);
+  box-shadow: inset 2vmin 0 rgba(0, 0, 0, 0.15);
   position: relative;
+  border-radius: 0 0 0.5vmin 0.5vmin;
+  transform-style: preserve-3d;
 }
 
 .plant-pot::before {
   position: absolute;
   z-index: 5;
   content: "";
-  left: -2.5%;
+  left: -5%;
   top: -0.5vmin;
-  width: 105%;
-  height: 2vmin;
+  width: 110%;
+  height: 1vmin;
   background-color: rgb(126, 36, 21);
+  border-radius: 1vmin;
 }
 
 .plant-pot::after {
@@ -266,7 +289,7 @@ body {
   position: absolute;
   top: -1.15vmin;
   left: 0;
-  height: 2vmin;
+  height: 0.9vmin;
   width: 100%;
   z-index: 4;
   background-color: rgb(177, 101, 14);
@@ -286,6 +309,7 @@ body {
   border-radius: 0 4vmin;
   box-shadow: inset 1vmin 1vmin rgb(2, 177, 2), inset 2vmin 2vmin rgb(3, 107, 8);
   border-left: rgb(0, 73, 0) 0.4vmin solid;
+  transform: translateZ(-1px);
 }
 
 .leaf:nth-child(1) {
@@ -525,7 +549,7 @@ body {
   width: 6vmin;
   margin-bottom: 1vmin;
   margin-left: 3vmin;
-  border-bottom: 0.5vmin rgb(49, 24, 4) solid;
+  border-bottom: 0.5vmin rgb(65, 32, 6) solid;
   position: relative;
   z-index: 1;
 }
@@ -538,7 +562,7 @@ body {
   height: 8vmin;
   width: 1vmin;
   background-color: rgb(104, 51, 1);
-  box-shadow: inset 0.4vmin 0 rgb(49, 24, 4);
+  box-shadow: inset 0.4vmin 0 rgb(65, 32, 6);
 }
 
 .potion-stand::after {
@@ -549,7 +573,7 @@ body {
   height: 0.8vmin;
   width: 10vmin;
   background-color: rgb(104, 51, 1);
-  border-bottom: 0.5vmin rgb(49, 24, 4) solid;
+  border-bottom: 0.5vmin rgb(65, 32, 6) solid;
 }
 
 .potion-large {
@@ -666,7 +690,7 @@ body {
 .plant-pot-2 {
   width: 5vmin;
   height: 4vmin;
-  box-shadow: inset 1.5vmin 0 rgb(165, 45, 24);
+  box-shadow: inset 1vmin 0 rgba(0, 0, 0, 0.15);
 }
 
 .cactus {
@@ -680,6 +704,7 @@ body {
   box-shadow: inset 0.3vmin 0 rgb(0, 110, 0), inset 0 0.45vmin rgb(0, 145, 0),
     inset 1vmin 0 rgb(0, 145, 0), inset 1.3vmin 0 rgb(0, 110, 0),
     inset -1vmin 0 rgb(0, 145, 0), inset -1.3vmin 0 rgb(0, 110, 0);
+  transform: translateZ(-1px);
 }
 
 .cactus::before {
@@ -761,7 +786,7 @@ body {
 }
 
 .door::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 35%;
   left: 1vmin;
@@ -773,7 +798,7 @@ body {
 
 .right {
   border: var(--brown) 0.4vmin solid;
-  border-color: var(--brown) var(--brown) var(--brown) var(--dark-brown) ;
+  border-color: var(--brown) var(--brown) var(--brown) var(--dark-brown);
   left: 48%;
 }
 
@@ -800,7 +825,8 @@ body {
   left: 2.5vmin;
   outline: 0.3vmin rgb(77, 77, 77) solid;
   border: 0.5vmin rgb(214, 214, 214) solid;
-  box-shadow: inset 0.2vmin 0.2vmin 0 0vmin rgb(65, 65, 65), -1vmin 1vmin 0 -0.8vmin rgb(77, 77, 77);
+  box-shadow: inset 0.2vmin 0.2vmin 0 0vmin rgb(65, 65, 65),
+    -1vmin 1vmin 0 -0.8vmin rgb(77, 77, 77);
 }
 
 .camera::before {
@@ -844,5 +870,321 @@ body {
   position: absolute;
   left: 0.5vmin;
   top: -0.4vmin;
-  transform: translateZ(-1px)
+  transform: translateZ(-1px);
+}
+
+.hanging-plant {
+  --hanging-plant-color: #315311;
+  height: 11vmin;
+  width: 5vmin;
+  position: absolute;
+  top: -11vmin;
+  left: 1.5vmin;
+  border-radius: 2.5vmin 2.5vmin 0 0;
+  border: 0.7vmin var(--hanging-plant-color) solid;
+  border-bottom: transparent;
+}
+
+.hanging-plant-pot {
+  margin-left: 4vmin;
+}
+
+.hanging-plant::before {
+  content: "";
+  position: absolute;
+  width: 1vmin;
+  height: 5.5vmin;
+  background-color: var(--brown);
+  top: 6vmin;
+  right: -0.8vmin;
+}
+
+.hanging-plant-pole {
+  content: "";
+  height: 12vmin;
+  width: 0.4vmin;
+  background-color: #633713;
+  position: absolute;
+  left: 0.3vmin;
+  top: -2vmin;
+  border-radius: 0.2vmin;
+}
+
+.vine {
+  width: 0.6vmin;
+  background-color: var(--hanging-plant-color);
+  border-radius: 0 0 0.5vmin 0.5vmin;
+  position: absolute;
+}
+
+.vine:nth-child(1) {
+  left: 1vmin;
+  height: 2.5vmin;
+}
+
+.vine:nth-child(2) {
+  left: 2.5vmin;
+  height: 5vmin;
+}
+
+.vine:nth-child(3) {
+  right: -0.7vmin !important;
+  top: 6vmin;
+  height: 0.7vmin;
+  width: 0.7vmin;
+}
+
+.hanging-leaf {
+  height: 1.5vmin;
+  width: 1vmin;
+  background-color: #426e18;
+  border-radius: 2vmin;
+  position: absolute;
+  box-shadow: inset 0.4vmin 0 var(--hanging-plant-color);
+}
+
+.hanging-leaf:nth-child(1) {
+  transform: rotate(-50deg);
+  top: 7.5vmin;
+  left: -1.5vmin;
+}
+
+.hanging-leaf:nth-child(2) {
+  transform: rotate(45deg) scaleX(-1);
+  top: 4vmin;
+  left: -0.2vmin;
+}
+
+.hanging-leaf:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 0vmin;
+  left: -1vmin;
+}
+
+.hanging-leaf:nth-child(4) {
+  transform: rotate(-60deg);
+  top: 1vmin;
+  left: 4vmin;
+}
+
+.hanging-leaf:nth-child(5) {
+  transform: rotate(50deg) scaleX(-1);
+  top: 5vmin;
+  left: 3vmin;
+}
+
+.berry {
+  height: 0.7vmin;
+  aspect-ratio: 1;
+  background-color: #943ec5;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: inset 0.4vmin 0 #4f1c6d;
+}
+
+.berry::after {
+  content: "";
+  height: 0.2vmin;
+  aspect-ratio: 1;
+  background-color: #bd6eeb;
+  border-radius: 50%;
+  position: absolute;
+  left: 0.4vmin;
+  top: 0.4vmin;
+}
+
+.berry:nth-child(1) {
+  top: 2.5vmin;
+  left: -1.1vmin;
+  transform: rotate(120deg);
+}
+
+.berry:nth-child(2) {
+  top: 0.7vmin;
+  left: 0.7vmin;
+  transform: rotate(185deg);
+}
+
+.berry:nth-child(3) {
+  top: 1.1vmin;
+  left: 2.3vmin;
+  transform: rotate(110deg);
+}
+
+.berry:nth-child(4) {
+  top: 3.7vmin;
+  left: 2.7vmin;
+  transform: rotate(-40deg);
+}
+
+.berry:nth-child(5) {
+  top: 2.5vmin;
+  left: 3.5vmin;
+  transform: rotate(130deg);
+}
+
+.berry:nth-child(6) {
+  top: 5.5vmin;
+  left: 4vmin;
+  transform: rotate(20deg);
+}
+
+.book-stopper-2 {
+  width: 4vmin;
+  height: 5vmin;
+  margin-bottom: 1.5vmin;
+  margin-left: 3.5vmin;
+  border-bottom: 1vmin rgb(238, 182, 118) solid;
+  border-right: 1vmin rgb(238, 182, 118) solid;
+  box-shadow: 0 0.5vmin rgb(117, 74, 25);
+}
+
+.book-3:nth-child(2) {
+  --book-color: #29405f;
+  width: 5vmin;
+  height: 13vmin;
+  background-color: var(--book-color);
+  box-shadow: inset 1.5vmin 0 #00000033, inset 0 0.5vmin #e6e6f0,
+    inset 0 2vmin var(--book-color), inset 0 2.5vmin #e8e6f0,
+    inset 0 3vmin var(--book-color), inset 0 3.5vmin #e8e6f0,
+    inset 0 4vmin var(--book-color), inset 0 4.5vmin #e8e6f0,
+    inset 0 12.5vmin var(--book-color), inset 0 13vmin #e8e6f0;
+  margin-bottom: 0.5vmin;
+}
+
+.book-3:nth-child(3) {
+  --book-color: #34928d;
+  width: 4vmin;
+  height: 11vmin;
+  background-color: var(--book-color);
+  box-shadow: inset 1.5vmin 0 #00000038, inset 0 2vmin var(--book-color),
+    inset 0 2.5vmin #edeff1, inset 0 3vmin var(--book-color),
+    inset 0 3.5vmin #edeff1, inset 0 7.5vmin var(--book-color),
+    inset 0 8vmin #edeff1, inset 0 8.5vmin var(--book-color),
+    inset 0 9vmin #edeff1;
+  margin-bottom: 1vmin;
+}
+
+.book-3:nth-child(4) {
+  --book-color: #7f43b8;
+  width: 2vmin;
+  height: 10vmin;
+  background-color: var(--book-color);
+  box-shadow: inset 1vmin 0 #00000038, inset 0 7.5vmin var(--book-color),
+    inset 0 8vmin #e6d8f0, inset 0 8.5vmin var(--book-color),
+    inset 0 9vmin #e6d8f0;
+  margin-bottom: 0.9vmin;
+}
+
+.book-3:nth-child(5) {
+  --book-color: hwb(300 89% 7%);
+  width: 2.7vmin;
+  height: 9vmin;
+  background-color: var(--book-color);
+  box-shadow: inset 1vmin 0 #0000002d, inset 0 0.5vmin #5785b3,
+    inset 0 -0.5vmin #5785b3;
+  margin-bottom: 1.2vmin;
+}
+
+.book-3:nth-child(6) {
+  --book-color: #dbeeee;
+  width: 3vmin;
+  height: 10vmin;
+  background-color: var(--book-color);
+  box-shadow: inset 1.2vmin 0 #00000033, inset 0 2vmin var(--book-color),
+    inset 0 2.5vmin #4f35aa, inset 0 3vmin var(--book-color),
+    inset 0 3.5vmin #4f35aa, inset 0 4vmin var(--book-color),
+    inset 0 4.5vmin #4f35aa, inset 0 10vmin var(--book-color);
+  margin-bottom: 0.8vmin;
+}
+
+.book-3:nth-child(7) {
+  --book-color: #637e9c;
+  width: 3vmin;
+  height: 11vmin;
+  background-color: var(--book-color);
+  box-shadow: inset 1.2vmin 0 #00000038, inset 0 2vmin var(--book-color),
+    inset 0 2.5vmin #ebe7ee, inset 0 3vmin var(--book-color),
+    inset 0 3.5vmin #ebe7ee;
+  margin-bottom: 0.4vmin;
+}
+
+.book-3:nth-child(8) {
+  --book-color: #6b48ac;
+  width: 4vmin;
+  height: 11vmin;
+  background-color: var(--book-color);
+  box-shadow: inset 1.5vmin 0 #00000038, inset 0 2.3vmin var(--book-color),
+    inset 0 3vmin #cce0df, inset 0 8.3vmin var(--book-color),
+    inset 0 9vmin #cce0df;
+  margin-bottom: 1vmin;
+}
+
+.book-3:nth-child(9) {
+  --book-color: #53b6a5;
+  width: 2vmin;
+  height: 10vmin;
+  background-color: var(--book-color);
+  box-shadow: inset 0.7vmin 0 #00000038, inset 0 7.5vmin var(--book-color),
+    inset 0 8vmin #efe7f5, inset 0 8.5vmin var(--book-color),
+    inset 0 9vmin #efe7f5;
+  margin-bottom: 0.9vmin;
+}
+
+.book-3:nth-child(10) {
+  --book-color: #7e3bac;
+  width: 4vmin;
+  height: 11vmin;
+  background-color: var(--book-color);
+  box-shadow: inset 1.5vmin 0 #00000038, inset 0 1vmin var(--book-color),
+    inset 0 1.5vmin #edeff1, inset 0 2vmin var(--book-color),
+    inset 0 2.5vmin #edeff1, inset 0 8.5vmin var(--book-color),
+    inset 0 9vmin #edeff1, inset 0 9.5vmin var(--book-color),
+    inset 0 10vmin #edeff1;
+  margin-bottom: 1vmin;
+}
+
+.book-3:nth-child(11) {
+  --book-color: hwb(300 89% 7%);
+  width: 3.5vmin;
+  height: 9.5vmin;
+  background-color: var(--book-color);
+  box-shadow: inset 1vmin 0 #0000002d, inset 0 0.5vmin #c265bd,
+    inset 0 4vmin var(--book-color), inset 0 4.5vmin #c265bd,
+    inset 0 5vmin var(--book-color), inset 0 5.5vmin #c265bd,
+    inset 0 -0.5vmin #c265bd;
+  margin-bottom: 1.2vmin;
+}
+
+.book-3:nth-child(12) {
+  --book-color: #dbeeee;
+  width: 2.2vmin;
+  height: 10vmin;
+  background-color: var(--book-color);
+  box-shadow: inset 1vmin 0 #00000033, inset 0 2vmin var(--book-color),
+    inset 0 2.5vmin #4f35aa, inset 0 3vmin var(--book-color),
+    inset 0 3.5vmin #4f35aa;
+  margin-bottom: 0.8vmin;
+}
+
+.book-3:nth-child(13) {
+  --book-color: #a05aa0;
+  width: 3.5vmin;
+  height: 11vmin;
+  background-color: var(--book-color);
+  box-shadow: inset 1.5vmin 0 #00000038, inset 0 0.5vmin #edeff1,
+    inset 0 -0.5vmin #edeff1;
+  margin-bottom: 1vmin;
+}
+
+.book-3:nth-child(14) {
+  --book-color: #e8e6f0;
+  width: 4vmin;
+  height: 14vmin;
+  background-color: var(--book-color);
+  box-shadow: inset 1.5vmin 0 #00000033, inset 0 1vmin #295f46,
+    inset 0 3vmin var(--book-color), inset 0 3.5vmin #295f46,
+    inset 0 4vmin var(--book-color), inset 0 4.5vmin #295f46,
+    inset 0 13vmin var(--book-color), inset 0 14vmin #295f46;
+  margin-bottom: 0.5vmin;
 }
