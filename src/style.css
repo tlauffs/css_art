@@ -32,6 +32,8 @@
 html,
 body {
   font-family: "Kanit", sans-serif;
+  font-size: 1rem;
+  word-break: break-word;
 }
 
 body {
@@ -47,9 +49,33 @@ h1 {
   line-height: 100%;
 }
 
+a {
+  color: #a14091;
+  transition: all ease 200ms;
+}
+
+a:hover {
+  color: #55104b;
+}
+
 .flex {
   display: flex;
   align-items: flex-end;
+}
+
+.background-circle {
+  position: fixed;
+  width: max(200%, 100rem);
+  height: 100%;
+  bottom: -65%;
+  background-color: #6b6386;
+  border-radius: 50%;
+}
+
+.name {
+ margin-left: 3vmin;
+ margin-bottom: 1vmin;
+ max-width: 70%;
 }
 
 .bookshelf {
@@ -68,12 +94,18 @@ h1 {
   .bookshelf-wrapper {
     scale: 130%;
   }
+  h1 {
+    font-size: 1rem;
+  }
+  p{
+    font-size: 0.6rem;
+  }
 }
 
 .bookshelf-top {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: flex-end;
   width: 100%;
   padding: 0 5vmin;
 }
@@ -194,7 +226,7 @@ h1 {
   box-shadow: inset 1.5vmin 0 #00000033, inset 0 2vmin var(--book-color),
     inset 0 2.5vmin #4f35aa, inset 0 3vmin var(--book-color),
     inset 0 3.5vmin #4f35aa, inset 0 4vmin var(--book-color),
-    inset 0 4.5vmin #4f35aa, inset 0 10vmin var(--book-color);
+    inset 0 4.5vmin #4f35aa, inset 0 9.5vmin var(--book-color), inset 0 -0.5vmin #4f35aa;
   margin-bottom: 0.8vmin;
 }
 
@@ -214,9 +246,11 @@ h1 {
   width: 4vmin;
   height: 11vmin;
   background-color: var(--book-color);
-  box-shadow: inset 1.5vmin 0 #00000038, inset 0 2.4vmin var(--book-color),
-    inset 0 3vmin #cce0df, inset 0 8.4vmin var(--book-color),
-    inset 0 9vmin #cce0df;
+  box-shadow: inset 1.5vmin 0 #00000038, inset 0 0.5vmin #cce0df,
+    inset 0 3.5vmin var(--book-color), inset 0 4vmin #cce0df,
+    inset 0 4.5vmin var(--book-color), inset 0 6.5vmin #cce0df,
+    inset 0 7vmin var(--book-color), inset 0 7.5vmin #cce0df,
+    inset 0 -0.5vmin #cce0df;
   margin-bottom: 1vmin;
 }
 
@@ -363,8 +397,9 @@ h1 {
   height: 11vmin;
   background-color: var(--book-color);
   box-shadow: inset 1.2vmin 0 #00000038, inset 0 2vmin var(--book-color),
-    inset 0 3vmin #9fceca, inset 0 3.5vmin var(--book-color),
-    inset 0 4.5vmin #9fceca;
+    inset 0 2.5vmin #cbdddc, inset 0 3vmin var(--book-color),
+    inset 0 4.5vmin #cbdddc, inset 0 5vmin var(--book-color),
+    inset 0 5.5vmin #cbdddc;
 }
 
 .book-stack .book:nth-child(2) {
@@ -372,7 +407,7 @@ h1 {
   width: 2vmin;
   height: 8vmin;
   background-color: var(--book-color);
-  box-shadow: inset 1.2vmin 0 #00000038, inset 0 5vmin var(--book-color),
+  box-shadow: inset 1vmin 0 #00000038, inset 0 5vmin var(--book-color),
     inset 0 5.5vmin #e6d8f0, inset 0 6vmin var(--book-color),
     inset 0 6.5vmin #e6d8f0;
   margin-top: 2vmin;
@@ -803,9 +838,9 @@ h1 {
 }
 
 .camera {
-  position: relative;
-  margin-bottom: 1vmin;
-  margin-left: 2vmin;
+  position: absolute;
+  top: -7vmin;
+  right: 2vmin;
   width: 6vmin;
   height: 4vmin;
   border-radius: 0.6vmin;

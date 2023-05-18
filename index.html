@@ -10,22 +10,25 @@
       rel="stylesheet"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <title>Pure CSS Bookshelf</title>
+    <meta name="description" content="A Bookshelf made using only CSS. Made by: Tim Lauffs">
   </head>
   <body>
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
+    <div class="background-circle"></div>
     <div class="bookshelf-wrapper">
-      <div class="bookshelf-top">
-        <div></div>
-        <div class="camera">
-          <div class="flash"></div>
-          <div class="trigger"></div>
+        <div class="name">
+          <h1> Pure CSS Bookshelf</h1>
+          <p>Made by Tim Lauffs (<a href="https://timlauffs.com/" target="_blank">www.timlauffs.com</a>)</p>
         </div>
-      </div>
       <div class="bookshelf">
         <div class="shelf">
           <div class="shelf-flex">
+            <div class="camera">
+              <div class="flash"></div>
+              <div class="trigger"></div>
+            </div>
             <div class="flex book-row">
               <div class="book"></div>
               <div class="book"></div>
